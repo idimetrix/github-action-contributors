@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "GitHub action generates dynamic image URL for contributor list to display it!",
   "license": "MIT",
-  "homepage": "https://github.com/idimetrix/github#readme",
-  "url": "https://github.com/idimetrix/github-action-contributors/issue",
+  "homepage": "https://github.com/idimetrix/github-action-contributors#readme",
+  "url": "https://github.com/idimetrix/github-action-contributors",
   "bugs": {
     "url": "https://github.com/idimetrix/github-action-contributors/issues"
   },
