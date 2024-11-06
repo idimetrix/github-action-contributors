@@ -1,0 +1,98 @@
+name: 'Github Contributors Icon Generator'
+author: 'Dmitrii Selikhov'
+description: 'Github action generates dynamic image URL for contributor list to display it!.'
+inputs:
+  token:
+    description: 'Your GITHUB_TOKEN'
+    default: ${{ github.token }}
+    required: false
+
+  filter-author:
+    description: 'Regular expression filtering'
+    default: ''
+    required: false
+
+  count:
+    description: Specify the max count of contributors listed. Default list all contributors.
+    required: false
+
+  output:
+    description: 'output image path'
+    default: CONTRIBUTORS.svg
+    required: false
+
+  truncate:
+    description: Truncate username by specified length, `0` for no truncate.
+    required: false
+    default: '12'
+
+  hideName:
+    description: Hide names in `htmlTable`
+    required: false
+
+  excludeBots:
+    description: Exclude bots users
+    default: 'true'
+    required: false
+
+  svgWidth:
+    description: Width of the generated SVG.
+    required: false
+    default: '740'
+
+  avatarSize:
+    description: Size of user avatar.
+    required: false
+    default: '24'
+
+  avatarMargin:
+    description: Margin of user avatar.
+    required: false
+    default: '5'
+
+  userNameHeight:
+    description: Height of user name.
+    required: false
+    default: '0'
+
+  svgTemplate:
+    description: Template to render SVG.
+    required: false
+    default: >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        width="{{ width }}"
+        height="{{ contributorsHeight }}"
+      >
+        <style>.contributor-link { cursor: pointer; }</style>
+        {{{ contributors }}}
+      </svg>
+
+
+outputs:
+  svg:
+    description: 'svg image string'
+  htmlTable:
+    description: 'Contributor HTML <Table> form string'
+  htmlTableBots:
+    description: 'Contributor(Bot Users) HTML <Table> form string'
+  htmlList:
+    description: 'Contributor HTML <a> list form string'
+  htmlListBots:
+    description: 'Contributor(Bot Users) HTML <a> form string'
+  htmlCollaboratorsTable:
+    description: 'Collaborators user HTML <Table> form string'
+  htmlCollaboratorsTableBots:
+    description: 'Collaborators user(Bot Users) HTML <Table> form string'
+  htmlCollaboratorsList:
+    description: 'Collaborators user HTML <a> list form string'
+  htmlCollaboratorsListBots:
+    description: 'Collaborators user(Bot Users) HTML <a> form string'
+runs:
+  using: 'node20'
+  main: 'lib/index.js'
+branding:
+  icon: 'list'
+  color: 'blue'
