@@ -2,7 +2,30 @@
   "name": "github-action-contributors",
   "version": "1.0.0",
   "description": "GitHub action generates dynamic image URL for contributor list to display it!",
-  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/idimetrix/github#readme",
+  "url": "https://github.com/idimetrix/github-action-contributors/issue",
+  "bugs": {
+    "url": "https://github.com/idimetrix/github-action-contributors/issues"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Dmitrii Selikhov",
+    "email": "dmitrii.selikhov@gmail.com",
+    "url": "https://www.linkedin.com/in/dimetrix"
+  },
+  "contributors": [
+    {
+      "name": "Dmitrii Selikhov",
+      "email": "dmitrii.selikhov@gmail.com",
+      "url": "https://www.linkedin.com/in/dimetrix"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idimetrix/github-action-contributors.git"
+  },
+  "email": "dmitrii.selikhov@gmail.com",
   "scripts": {
     "prepare": "husky && npm run build",
     "build": "ncc build src/index.ts -o lib",
@@ -12,12 +35,6 @@
     "format": "npm run prettier && npm run type",
     "bootstrap": "npm install && npm run format"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jaywcjlove/github-action-contributors"
-  },
-  "keywords": [],
-  "license": "MIT",
   "lint-staged": {
     "*.ts?(x)": [
       "npm run build"

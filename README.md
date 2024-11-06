@@ -104,7 +104,7 @@ Made with [contributors](https://github.com/idimetrix/github-action-contributors
 
 Write contributors(**`htmlList`**) to markdown Example:
 
-<!--GAMFC--><a href="https://github.com/idimetrix" title="小弟调调"><img src="https://avatars.githubusercontent.com/u/1680273?v=4" width="36;" alt="小弟调调"/></a><!--GAMFC-END-->
+<!--GAMFC--><!--GAMFC-END-->
 
 ### Write contributors(**`htmlTable`**) to markdown
 
